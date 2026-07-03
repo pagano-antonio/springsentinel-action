@@ -1,0 +1,17 @@
+name: 'SpringSentinel'
+description: 'Static analysis for Spring Boot applications'
+author: 'Antonio Pagano'
+
+branding:
+  icon: 'shield'
+  color: 'green'
+
+inputs:
+  fail-on-critical:
+    description: 'Fail build if critical findings are detected'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
