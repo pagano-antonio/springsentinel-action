@@ -8,7 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Spring PetClinic
+        uses: actions/checkout@v4
+        with:
+          repository: spring-petclinic/spring-petclinic-rest
 
       - name: Run SpringSentinel
-        uses: ./
+        run: |
+          mvn -B io.github.pagano-antonio:spring-sentinel-maven-plugin:audit
