@@ -4,7 +4,7 @@ set -e
 
 echo "Running SpringSentinel..."
 
-mvn spring-sentinel:audit
+mvn -B io.github.pagano-antonio:spring-sentinel-maven-plugin:audit
 
 
 echo "SpringSentinel completed."
