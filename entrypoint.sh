@@ -6,5 +6,8 @@ echo "Running SpringSentinel..."
 
 mvn -B io.github.pagano-antonio:spring-sentinel-maven-plugin:audit
 
+echo "Generating PR comment..."
 
-echo "SpringSentinel completed."
+node /scripts/generate-comment.js
+
+echo "Done."
